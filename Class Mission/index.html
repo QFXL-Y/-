@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 平台支持</title>
+    <!-- 引入 Font Awesome 字体图标 -->
+    <link rel="stylesheet" href="./font-awesome.min.css">
+    <style>
+        /* 基础重置 */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            color: #333333;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            padding: 50px 20px;
+            box-sizing: border-box;
+        }
+
+        /* 顶部标题样式 */
+        .main-title {
+            text-align: center;
+            font-size: 42px;
+            font-family: '华文行楷', 'STXingkai', 'KaiTi', 'SimSun', serif;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 中间两列布局 */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .feature-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 盾牌图标样式（对应图片中的 '5' 和 'S'） */
+        .shield-icon {
+            height: 70px;
+            margin-bottom: 25px;
+        }
+
+        /* 段落文字样式 */
+        .feature-col p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #555555;
+            margin: 0;
+            text-align: justify;
+        }
+
+        /* 底部平台支持标题 */
+        .platform-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        /* 底部图标网格布局 */
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .platform-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .platform-item i {
+            font-size: 45px;
+            color: #000000;
+        }
+
+        .platform-item span {
+            font-size: 14px;
+            color: #333333;
+            font-weight: bold;
+        }
+
+        /* 响应式适配（手机端自动变为一列） */
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .platform-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 顶部标题 -->
+        <h1 class="main-title">万物互联、极致体验</h1>
+
+        <!-- 中间两列介绍 -->
+        <div class="features-grid">
+            <!-- 左侧列 (图标5) -->
+            <div class="feature-col">
+                <!-- 请确保图片命名为 icon-5.png 并放在同级目录 -->
+                <img src="./icon-5.png" alt="图标5" class="shield-icon">
+                <p>【HTML5】HTML5不仅仅是HTML规范的当前最新版本，HTML5进化的重大意义还在于HTML5从技术层面带来了八个类别的革新。HTML5规范以“用户至上”为宗旨。也就是说在遇到冲突时，规范的优先级为：用户>页面作者>实现者（浏览器）>规范开发者（W3C/WHATWG）>纯理论。除此之外，HTML5还引入了一种新的安全模型来保证HTML5足够安全。</p>
+            </div>
+            <!-- 右侧列 (图标S) -->
+            <div class="feature-col">
+                <!-- 请确保图片命名为 icon-s.png 并放在同级目录 -->
+                <img src="./icon-s.png" alt="图标S" class="shield-icon">
+                <p>【HTML5】HTML5不仅仅是HTML规范的当前最新版本，HTML5进化的重大意义还在于HTML5从技术层面带来了八个类别的革新。HTML5规范以“用户至上”为宗旨。也就是说在遇到冲突时，规范的优先级为：用户>页面作者>实现者（浏览器）>规范开发者（W3C/WHATWG）>纯理论。除此之外，HTML5还引入了一种新的安全模型来保证HTML5足够安全。</p>
+            </div>
+        </div>
+
+        <!-- 底部平台支持 -->
+        <h2 class="platform-title">平台支持</h2>
+        <div class="platform-grid">
+            <!-- 苹果 -->
+            <div class="platform-item">
+                <i class="fa fa-apple"></i>
+                <span>原生移动APP开发</span>
+            </div>
+            <!-- 微信 -->
+            <div class="platform-item">
+                <i class="fa fa-weixin"></i>
+                <span>微信公众平台开发</span>
+            </div>
+            <!-- 台式电脑 -->
+            <div class="platform-item">
+                <i class="fa fa-desktop"></i>
+                <span>网站开发</span>
+            </div>
+            <!-- 笔记本电脑 -->
+            <div class="platform-item">
+                <i class="fa fa-laptop"></i>
+                <span>桌面应用开发</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
